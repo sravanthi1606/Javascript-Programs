@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find the lines and characters and words in a string</h1>
+    <script>
+        var str=`Lorem ipsum dolor sit amet consectetur
+                 adipisicing elit. Dolore repudiandae nisi veritatis
+                 alias corrupti quia error voluptas magnam unde illum 
+                 enim voluptatem dignissimos debitis odit, labore perferendis,
+                 blanditiis assumenda modi.`;
+        var charcount=str.split("");
+        console.log(charcount);
+        console.log(charcount.length);
+
+        var wordcount=str.split(" ");
+        console.log(wordcount);
+        console.log(wordcount.length);
+
+        var linecount=str.split("\n");
+        console.log(linecount);
+        console.log(linecount.length);
+        
+    </script>
+</body>
+</html>
