@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Array even and odd (using for-in and for-of)</h1>
+
+    <script>
+        //basic method of even and odd numbers of array
+        let array=[1,2,3,4,5,6,7,8,9];
+        let even=[];
+        let odd=[];
+        for(i=0;i<array.length;i++){
+            if(array[i]%2==0){
+                even.push(array[i])
+            }
+            else{
+            odd.push(array[i])
+            }
+        }
+        console.log(even,odd)
+
+        //pre-defined methods  [for-in and for-of]
+        let array1=[1,2,3,4,5,6,7,8,9];
+        let even1=[];
+        let odd1=[];
+        for(let num of array1){
+            if(num%2==0){
+                even1.push(num)
+            }
+            else
+            odd1.push(num)
+        }
+        console.log('even numbers :', even1,'odd numbers :',odd1)
+
+        let array2=[1,2,3,4,5,6,7,8,9];
+        let even2=[];
+        let odd2=[];
+        for(let num in array2){
+            if(num%2==0){
+                even2.push(num)
+            }
+            else
+            odd2.push(num)
+        }
+        console.log('odd indexes :', even2,'even indexes :',odd2)
+
+    </script>
+</body>
+</html>
