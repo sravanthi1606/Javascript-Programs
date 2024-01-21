@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>"1.Create 5 separate classes ( emp, person, car) by using constructor methods </h1>
+    <script>
+        // Employee method 
+        class Employee{
+            constructor(name,designation,salary,exp){
+                this.name=name;
+                this.designation=designation;
+                this.salary=salary;
+                this.exp=exp;
+                console.log(this);
+            }
+            hike(){
+                if(this.exp>2){
+                    this.salary=this.salary+0.1*this.salary;
+                }
+                else{
+                    this.salary=this.salary+0.2*this.salary;
+                }
+            }
+        }
+        const emp=new Employee("sravanthi","Web Developer",300000,1);
+        const emp1=new Employee("Rani","software",280000,1);
+        emp.hike();
+        console.log(emp);
+        emp1.hike();
+        console.log(emp1);
+
+
+        // Person method 
+        class Person{
+            constructor(name,age,phnum,gender){
+                this.name=name;
+                this.age=age;
+                this.phnum=phnum;
+                this.gender=gender;
+                console.log(this);
+            }
+            gen(){
+                if(this.gender=="F"){
+                    this.gender=="F";
+                }
+                else{
+                    this.gender=="M";                }
+            }
+        }
+        const per1=new Person("sravanthi",21,9876543210,"F");
+        const per2=new Person("Rani",22,9742135689,"F");
+        per1.gen();
+        console.log(per1);
+        per2.gen();
+        console.log(per2);
+
+        // car method 
+        class Car{
+            constructor(name,tires,color,seat,price){
+                this.name=name;
+                this.tires=tires;
+                this.color=color;
+                this.seat=seat;
+                this.price=price;
+            }
+            hike(){
+                if(this.price>=200000){
+                    this.price+=0.1*this.price;
+                }
+                else{
+
+                }
+            }
+        }
+        const carObj=new Car("Dzire",4,"white",8,100000);
+        console.log(empObj);
+        const carObj1=new Car("dp",4,"pink",5,500000);
+        console.log(carObj1);
+        carObj.hike();
+        console.log(carObj);
+        carObj1.hike();
+        console.log(carObj1);
+    </script>
+</body>
+</html>
