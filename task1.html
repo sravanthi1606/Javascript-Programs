@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Polymorphism,Inheritance,setters and getters,Static Method</h1>
+
+    <script>
+
+        //static method
+        class Employee{
+            normalMeth(){
+                console.log("normal method");
+            }
+            static staticMethod(){
+                console.log("static method");
+            }
+        }
+        const obj1=new Employee();
+        Employee.staticMethod();
+        obj1.normalMeth();
+
+        //inheritence
+        class A{
+            constructor(){
+                console.log("constructor");
+            }
+            method(){
+                console.log("method of A");
+            }
+        }
+        class B extends A{
+            constuctor(){
+                Super();
+                console.log("B constructor");
+            }
+            method(){
+                super.method();
+                console.log("method of B");
+            }
+        }
+        const obj2=new B();
+        // console.log(obj2);
+        obj2.method();
+
+        //polymorphism
+        class polyMor{
+            method(){
+                console.log("no parameter");
+            }
+            method(a){
+                console.log("with no param");
+            }
+            method(a,b){
+                console.log("with two parameters");
+            }
+        }
+        const obj3=new polyMor();
+        obj3.method();
+
+        //setters and getters
+        class getSet{
+            setName(name){
+                this.name=name;
+            }
+            getName(){
+                return this.name;
+            }
+        }
+        const obj4=new getSet();
+        obj4.setName("janu");
+        obj4.getName();
+        console.log(obj4);
+    </script>
+</body>
+</html>
