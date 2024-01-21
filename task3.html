@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sorting an array [ascending and descending] of strings and numbers</h1>
+    <script>
+        
+        //basic methods for ascending and descending
+        const phone =[9,4,4,0,6,6,7,3,5,1];
+        for(i=0;i<phone.length;i++){
+            for(j=0;j<=i;j++){
+                if(phone[i]<phone[j]){
+                    var temp=phone[i];
+                    phone[i]=phone[j];
+                    phone[j]=temp;
+                }
+            }
+        }
+        console.log('ascending',phone);
+
+        for(i=0;i<phone.length;i++){
+            for(j=0;j<=i;j++){
+                if(phone[i]>phone[j]){
+                    var temp=phone[i];
+                    phone[i]=phone[j];
+                    phone[j]=temp;
+                }
+            }
+        }
+        console.log('descending',phone)
+
+        //pre-defined for numbers ascending and descending
+        const number=[2,3,1,4,6,7,89,99,23,34,56,14,21];
+        number.sort((a,b)=>a-b);
+        console.log(number)
+
+        number.sort((a,b)=>b-a);
+        console.log(number)
+
+        //pre-defined for strings ascending and descending
+        const names=['Damon','Klaus','Katherine','Stefan','Elijah','Bonnie','Joe','Hope','Alaric'];
+        names.sort();
+        console.log(names)
+
+        names.sort().reverse();
+        console.log(names);
+    </script>
+</body>
+</html>
