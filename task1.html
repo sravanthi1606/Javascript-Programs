@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array----print largest and 3rd largest Number</h1>
+    <script>
+          //largest Number of an Array
+            console.log("Largest Number of an array");
+            let array=[1,2,3,4,5];
+            let largestNum=[];
+            for(i=0;i<array.length;i++){
+                if(array[i]>largestNum){
+                    largestNum=array[i]
+                }
+            }
+            console.log(largestNum)
+
+        //Third Largest Number of an array
+        console.log("Third Largest Number of an array");
+        let array1=[1,2,3,4,5];
+        let first=[];
+        let second=[];
+        let third=[];
+        for(i=1;i<array1.length;i++){
+            if(array1[i]>first){
+                third=second;
+                second=first;
+                first=array1[i];
+            }
+            else if (array1[i]>second){
+                third=second;
+                second=array1[i];
+            }
+            else if(array1[i]>third){
+                third=array1[i];
+            }
+        }
+        console.log('third largest number is', third )
+        console.log('second largest number is', second)
+        console.log('first largest number is', first)
+
+    </script>
+</body>
+</html>
