@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2000-2040 print only leap year in array using loop</h1>
+    <script> 
+        //Leap years from 2000-2040
+
+        function isLeapYear(stryr,endyr){
+            for(i=stryr;i<=endyr;i++){
+                if(i % 4 == 0 && i % 4 != 100 || i % 400 == 0){
+                    console.log(i,' is leap year')
+                }
+            }
+        }
+        isLeapYear(2000,2040)
+    </script>
+</body>
+</html>
