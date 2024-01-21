@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Palindrome</h1>
+    <script>
+        
+        //palindrome
+        function palindrome(str){
+            let numStr=str.toString()
+            let revStr=numStr.split('').reverse().join('');
+            if(str==revStr){
+                console.log(str+' is Palindrome');
+            }
+            else{
+                console.log(str+' is not a Palindrome');
+            }
+        }
+        palindrome(101);
+    </script>
+</body>
+</html>
